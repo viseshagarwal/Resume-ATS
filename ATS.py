@@ -10,8 +10,8 @@ import os
 
 
 def install_packages():
-    os.system("apt-get update")
-    os.system("apt-get install -y --no-install-recommends $(cat packages.txt)")
+    # os.system("apt-get update")
+    os.system("apt-get install -y --no-install-recommends poppler-utils")
 
 
 install_packages()
