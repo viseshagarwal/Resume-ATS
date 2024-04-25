@@ -6,6 +6,15 @@ import os
 from PIL import Image
 import pdf2image
 import google.generativeai as genai
+import os
+
+
+def install_packages():
+    os.system("apt-get update")
+    os.system("apt-get install -y --no-install-recommends $(cat packages.txt)")
+
+
+install_packages()
 
 
 load_dotenv()
