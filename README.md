@@ -7,8 +7,8 @@ This Streamlit application allows users to analyze resumes against job descripti
 1. Install required packages by running the following commands:
 
    ```bash
-   apt-get update
-   apt-get install -y --no-install-recommends poppler-utils
+   sudo apt-get update
+   sudo apt-get install -y --no-install-recommends poppler-utils
    ```
 
 2. Install Python dependencies:
