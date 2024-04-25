@@ -9,12 +9,12 @@ import google.generativeai as genai
 import os
 
 
-def install_packages():
-    # os.system("apt-get update")
-    os.system("apt-get install -y --no-install-recommends poppler-utils")
+# def install_packages():
+# os.system("apt-get update")
+# os.system("apt-get install -y --no-install-recommends poppler-utils")
 
 
-install_packages()
+# install_packages()
 
 
 load_dotenv()
