@@ -24,7 +24,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 def get_gemini_respose(input, pdf_content, prompt):
-    model_name="gemini-1.5-flash-latest"
+    model_name="gemini-1.5-pro-latest"
     model = genai.GenerativeModel(model_name)
     response = model.generate_content([input, pdf_content[0], prompt])
     return response.text
