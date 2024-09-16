@@ -3,3 +3,5 @@ google-generativeai
 python-dotenv
 poppler-utils
 pdf2image
+azure-ai-inference 
+PyPDF2

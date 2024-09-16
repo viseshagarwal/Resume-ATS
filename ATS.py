@@ -24,7 +24,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 def get_gemini_respose(input, pdf_content, prompt):
-    model_name="gemini-1.5-pro-latest"
+    model_name = "gemini-1.5-pro-latest"
     model = genai.GenerativeModel(model_name)
     response = model.generate_content([input, pdf_content[0], prompt])
     return response.text
@@ -71,10 +71,15 @@ submit3 = st.button("Match my Resume with the Job Description( Percentage Match)
 
 submit4 = st.button("Missing keywords in my Resume")
 
-input_prompt1 = """
- You are an experienced Technical Human Resource Manager,your task is to review the provided resume against the job description. 
-  Please share your professional evaluation on whether the candidate's profile aligns with the role. 
+input_prompt1 = """ 
+ You are an experienced Technical Human Resource Manager for a Tech company, your task is to review the provided resume against the job description. 
+ Please share your professional evaluation on whether the candidate's profile aligns with the role. Give more ATS friendly reviews.
  Highlight the strengths and weaknesses of the applicant in relation to the specified job requirements.
+"""
+
+input_prompt2 = """
+You are a professional career coach, your task is to provide feedback on the resume.
+Please provide suggestions on how the candidate can improve their skills and experience to better align with the job description.
 """
 
 input_prompt3 = """
@@ -83,10 +88,7 @@ your task is to evaluate the resume against the provided job description. give m
 the job description. First the output should come as percentage and then keywords missing and last final thoughts.
 """
 
-input_prompt2 = """
-You are a professional career coach, your task is to provide feedback on the resume.
-Please provide suggestions on how the candidate can improve their skills and experience to better align with the job description.
-"""
+
 input_prompt4 = """
 You are an experienced ATS (Applicant Tracking System) scanner with a deep understanding of data science and ATS functionality,
 your task is to evaluate the resume against the provided job description.
